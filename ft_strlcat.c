@@ -6,12 +6,13 @@
 /*   By: laumoral <laumoral@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:49:36 by laumoral          #+#    #+#             */
-/*   Updated: 2023/01/18 11:29:58 by laumoral         ###   ########.fr       */
+/*   Updated: 2023/02/02 17:36:38 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
+
 int	ft_strlen(char *str)
 {
 	int		len;
@@ -21,35 +22,43 @@ int	ft_strlen(char *str)
 		len++;
 	return (len);
 }
-*/
+
 size_t ft_strlcat(char *dst, char *src, size_t dstsize)
 {
-	int i;
-	int j;
-	int dlen;
-	int slen;
+	size_t dstlen;
+	size_t srclen;
+	size_t i;
+	size_t j;
 
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
 	i = 0;
-	dlen = ft_strlen(dst);
-	slen = ft_strlen(src);
-	j = dlen;
-	if (!dstsize || dstsize <= dlen)
-		return (slen + dstsize);
-	while (*src && i < dstsize - dlen - 1)
+	j = dstlen;
+
+	if (dstsize == 0)
+		return (dstsize + srclen);
+	while (src[i] != '\0' && i < dstsize - dstlen - 1)
 	{
 		dst[j] = src[i];
 		i++;
 		j++;
 	}
 	dst[j] = '\0';
-	return (dlen + slen);
+	return (dstsize + srclen);
+
 }
 
-/*int main ()
+int main ()
 {
-    char src[] = "Hola";
-    char dest[] = "nana";
+	char dest[13] = "Hello";
+	char src[] = " World!";
+	
+	printf("Expected:\n");
+	printf("%lu | %s\n", strlcat(dest, src, 13), dest);
+	printf("%lu | %s\n", strlcat(dest, src, 4), dest);
 
-    printf("%zu | %s", ft_strlcat(dest, src, 5), dest);
-    return (0);
-}*/
+	printf("Actual result:\n");
+	printf("%zu | %s", ft_strlcat(dest, src, 12), dest);
+	
+	return (0);
+}
