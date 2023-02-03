@@ -6,7 +6,7 @@
 /*   By: laumoral <laumoral@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:49:36 by laumoral          #+#    #+#             */
-/*   Updated: 2023/02/03 18:15:36 by laumoral         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:56:01 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,20 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-size_t ft_strlcat(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
-	size_t dstlen;
-	size_t srclen;
-	size_t i;
-	size_t j;
-	
+	size_t	dstlen;
+	size_t	srclen;	
+	size_t	i;
+	size_t	j;
+
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	i = 0;
 	j = dstlen;
-
 	if (dstsize == 0)
 		return (dstsize + srclen);
-
-	while (src[i]  && (dstlen + 1) < dstsize)
+	while (src[i] && (dstlen + 1) < dstsize)
 	{
 		dst[j] = src[i];
 		j++;
@@ -46,27 +44,25 @@ size_t ft_strlcat(char *dst, char *src, size_t dstsize)
 	}
 	dst[j] = '\0';
 	return (dstlen + srclen);
-
 }
-
-int main ()
+/*int main ()
 {
 	char dest[13] = "Hello";
 	char src[] = " World!";
-	char dest1[5] = "Hello";
+	char dest1[6] = "Hello";
     char src1[] = " World!";
 	char dest2[13] = "Hello";
     char src2[] = " World!";
-    char dest3[5] = "Hello";
+    char dest3[6] = "Hello";
     char src3[] = " World!";
 	
 	printf("Expected:\n");
 	printf("%lu | %s\n", strlcat(dest, src, 13), dest);
-	printf("%lu | %s\n", strlcat(dest1, src1, 5), dest1);
+	printf("%lu | %s\n", strlcat(dest1, src1, 6), dest1);
 
 	printf("Actual result:\n");
 	printf("%lu | %s\n", ft_strlcat(dest2, src2, 13), dest2);
-	printf("%lu | %s\n", ft_strlcat(dest3, src3, 5), dest3);
+	printf("%lu | %s\n", ft_strlcat(dest3, src3, 6), dest3);
 	
 	return (0);
-}
+}*/
