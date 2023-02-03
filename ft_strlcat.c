@@ -6,7 +6,7 @@
 /*   By: laumoral <laumoral@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:49:36 by laumoral          #+#    #+#             */
-/*   Updated: 2023/02/02 17:36:38 by laumoral         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:15:36 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t ft_strlcat(char *dst, char *src, size_t dstsize)
 	size_t srclen;
 	size_t i;
 	size_t j;
-
+	
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	i = 0;
@@ -37,14 +37,15 @@ size_t ft_strlcat(char *dst, char *src, size_t dstsize)
 
 	if (dstsize == 0)
 		return (dstsize + srclen);
-	while (src[i] != '\0' && i < dstsize - dstlen - 1)
+
+	while (src[i]  && (dstlen + 1) < dstsize)
 	{
 		dst[j] = src[i];
-		i++;
 		j++;
+		i++;
 	}
 	dst[j] = '\0';
-	return (dstsize + srclen);
+	return (dstlen + srclen);
 
 }
 
@@ -52,13 +53,20 @@ int main ()
 {
 	char dest[13] = "Hello";
 	char src[] = " World!";
+	char dest1[5] = "Hello";
+    char src1[] = " World!";
+	char dest2[13] = "Hello";
+    char src2[] = " World!";
+    char dest3[5] = "Hello";
+    char src3[] = " World!";
 	
 	printf("Expected:\n");
 	printf("%lu | %s\n", strlcat(dest, src, 13), dest);
-	printf("%lu | %s\n", strlcat(dest, src, 4), dest);
+	printf("%lu | %s\n", strlcat(dest1, src1, 5), dest1);
 
 	printf("Actual result:\n");
-	printf("%zu | %s", ft_strlcat(dest, src, 12), dest);
+	printf("%lu | %s\n", ft_strlcat(dest2, src2, 13), dest2);
+	printf("%lu | %s\n", ft_strlcat(dest3, src3, 5), dest3);
 	
 	return (0);
 }
