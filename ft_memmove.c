@@ -36,7 +36,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	return(dst);
 }
 
-int main()
+/*int main()
 {
 	char dest[5];
 	char source[5] = "Hola";
@@ -48,4 +48,4 @@ int main()
 	printf("%s", ((char *)ft_memmove(dest1, source1, len)));
 
 	return (0);
-}
+}*/

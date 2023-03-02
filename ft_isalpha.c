@@ -6,11 +6,10 @@
 /*   By: laumoral <laumoral@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:40:14 by laumoral          #+#    #+#             */
-/*   Updated: 2023/01/11 11:04:10 by laumoral         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:43:39 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))

@@ -6,11 +6,10 @@
 /*   By: laumoral <laumoral@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 11:01:41 by laumoral          #+#    #+#             */
-/*   Updated: 2023/01/11 11:19:56 by laumoral         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:44:49 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
 int	ft_isdigit(int n)
 {
 	if ((n >= '0' && n <= '9' ))

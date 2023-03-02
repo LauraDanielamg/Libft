@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);	
 }
 
-int main()
+/*int main()
 {
 	char *s = "Hola";
 	int c = 'o';
@@ -33,4 +33,4 @@ int main()
 	printf("%s\n",((char *)memchr(s, c, n)));
 	printf("%s", ((char *)ft_memchr(s, c, n)));
 	return(0);
-}
+}*/

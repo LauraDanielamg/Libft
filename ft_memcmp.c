@@ -18,7 +18,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	return(0);
 }
 
-int main()
+/*int main()
 {
 	char *s1 = "P";
 	char *s2 = "Avis";
@@ -27,3 +27,4 @@ int main()
 	printf("%s\n", memcmp(s1,s1,n));
 	return(0);
 }
+*/

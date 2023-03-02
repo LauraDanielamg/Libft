@@ -20,8 +20,7 @@ char *ft_strchr(const char *s, int c)
 			return(NULL);
 	return((char *)s);
 }
-
-int main()
+/*int main()
 {
 	const char *s = "Hola";
 	int c = 'a';
@@ -30,4 +29,4 @@ int main()
 	printf("%s\n", ft_strchr(s, c));
 
 	return(0);
-}
+}*/

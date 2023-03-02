@@ -30,7 +30,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (s1[i] - s2[i]);
 }
 
-int main ()
+/*int main ()
 {
     char *s1 = "Bed";
     char *s2 = "Bedroom";
@@ -55,3 +55,4 @@ int main ()
   printf("ACTUAL RESULT: \n %d\n\n", ft_strncmp(s4, s5, 10));
 	return (0);
 }
+*/
