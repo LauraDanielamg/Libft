@@ -1,0 +1,51 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: laumoral <laumoral@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/07 11:40:34 by laumoral          #+#    #+#             */
+/*   Updated: 2023/02/07 13:01:33 by laumoral         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <string.h>
+#include <stdio.h>
+
+void *ft_memmove(void *dst, const void *src, size_t len)
+{
+	unsigned char *dest;
+	const unsigned char *source;
+	size_t i;
+
+	i = 0;
+	dest = (unsigned char *) dst;
+	source = (const unsigned char *) src;
+	if (src == dst || len == 0)
+		return(dst);
+	if (dest > source)
+		while(len-- > 0)
+			dest[len] = source[len];
+	else if (dest < source)
+		while(i < 0)
+		{
+			dest[i]=source[i];
+			i++;
+		}
+	return(dst);
+}
+
+int main()
+{
+	char dest[5];
+	char source[5] = "Hola";
+	size_t len = 4;
+	char dest1[5];
+	char source1[5] = "Hola";
+
+	printf("%s\n", ((char *)memmove(dest, source, len)));
+	printf("%s", ((char *)ft_memmove(dest1, source1, len)));
+
+	return (0);
+}
