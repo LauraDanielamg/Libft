@@ -13,45 +13,34 @@
 #include "libft.h"
 #include <limits.h>
 
-#define BLANKS " \n\t\f\v\r"
-#define NUMBERS "0123456789"
-
-int ft_isin(const char *str, char needle)
+int ft_atoi(const char *str)
 {
-    int i;
+    int sign = 1;
+    long long int result = 0;
 
-    i = 0;
-    while(str[i])
+    // Ignorar espacios en blanco iniciales
+    while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+        str++;
+
+    // Verificar el signo
+    if (*str == '-' || *str == '+')
     {
-        if (needle == str[i])
-        {    
-            return(1);
-            i++;
-        }
-    }
-    return(0);
-}
-int ft_atoi(char *str)
-{
-    size_t i;
-    size_t number;
-    int sign;
-
-    i = 0;
-    sign = 1;
-    while(ft_isin(*str, BLANKS))
-        i++;
-    if (str[i] == '-' || str[i] == '+')
-        if (str[i++] == '-')
+        if (*str == '-')
             sign = -1;
-    while (ft_isin(NUMBERS , str[i]))
-    {
-        number *= 10;
-        number += (str[i++] -48);
+        str++;
     }
-    if (number > LONG_MAX && sign < 0) 
-        return (0);
-    else if (number > LONG_MAX && sign > 0) 
-        return (-1);
-    return(sign * number);
+
+    // Convertir los dígitos
+    while (*str >= '0' && *str <= '9')
+    {
+        result = result * 10 + (*str - '0');
+        // Verificar desbordamiento
+        if (result > INT_MAX && sign == 1)
+            return INT_MAX;
+        else if (result > INT_MAX && sign == -1)
+            return INT_MIN;
+        str++;
+    }
+
+    return sign * (int)result;
 }

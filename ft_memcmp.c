@@ -10,12 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	return(0);
+    const unsigned char *p1 = s1;
+    const unsigned char *p2 = s2;
+
+    for (size_t i = 0; i < n; i++)
+    {
+        if (p1[i] != p2[i])
+        {
+            // Devolver la diferencia entre los dos bytes diferentes
+            return (int)(p1[i] - p2[i]);
+        }
+    }
+
+    // Los bloques de memoria son iguales
+    return 0;
 }
 
 /*int main()
