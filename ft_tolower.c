@@ -19,7 +19,7 @@ int	ft_tolower(int c)
 }
 /*int main()
 {
-	int a = '*';
+	int a = 'B';
 	
 	int A = tolower(a);
 

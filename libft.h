@@ -13,8 +13,10 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
+#include <stdlib.h>
 #include <stddef.h>
+#include <unistd.h>
+#include <limits.h>
 
 
 int		ft_isalpha(int c);
