@@ -12,34 +12,29 @@
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int sign = 1;
-    long long int result = 0;
+	int					sign;
+	long long int		result;
 
-    // Ignorar espacios en blanco iniciales
-    while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-        str++;
-
-    // Verificar el signo
-    if (*str == '-' || *str == '+')
-    {
-        if (*str == '-')
-            sign = -1;
-        str++;
-    }
-
-    // Convertir los dígitos
-    while (*str >= '0' && *str <= '9')
-    {
-        result = result * 10 + (*str - '0');
-        // Verificar desbordamiento
-        if (result > INT_MAX && sign == 1)
-            return INT_MAX;
-        else if (result > INT_MAX && sign == -1)
-            return INT_MIN;
-        str++;
-    }
-
-    return sign * (int)result;
+	sign = 1;
+	result = 0;
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10 + (*str - '0');
+		if (result > INT_MAX && sign == 1)
+			return (INT_MAX);
+		else if (result > INT_MAX && sign == -1)
+			return (INT_MIN);
+		str++;
+	}
+	return (sign * (int)result);
 }

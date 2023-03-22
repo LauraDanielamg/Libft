@@ -14,22 +14,15 @@
 
 void	*ft_memset(void *b, int c, size_t len);
 
-void *ft_calloc(size_t nmemb, size_t size) 
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    // calcula el tamaño total de memoria requerida
-    size_t total_size = nmemb * size;
-    
-    // reserva suficiente memoria utilizando malloc
-    void *ptr = malloc(total_size);
-    
-    // verifica si malloc devolvió un puntero válido
-    if (ptr == NULL) {
-        return NULL;
-    }
-    
-    // inicializa el bloque de memoria reservado con ceros
-    ft_memset(ptr, 0, total_size);
-    
-    // devuelve un puntero al bloque de memoria reservado
-    return ptr;
+	size_t	total_size;
+	void	*ptr;
+
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memset(ptr, 0, total_size);
+	return (ptr);
 }

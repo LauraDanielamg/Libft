@@ -10,46 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-int ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	  size_t i = 0;
-    
-    while (i < n && s1[i] && s2[i])
-    {
-        if ((unsigned char)s1[i] != (unsigned char)s2[i])
-            return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-        i++;
-    }
-    if (i < n && (s1[i] || s2[i]))
-        return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-    return (0);
-}
+#include "libft.h"
 
-/*int main ()
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    char *s1 = "Bed";
-    char *s2 = "Bedroom";
-    char *s3 = "Door";
-    char *s4 = "";
-    char *s5 = "Incomprehensibilities";
+	size_t	i;
 
-  printf("TEST 1:\n");
-  printf("EXPECTED: Bed VS Bedroom, first 3 letters: \n%i\n", strncmp(s1, s2, 3));
-  printf("ACTUAL RESULT:\n%i\n\n", ft_strncmp(s1, s2, 3));
-  printf("TEST 2:\n");
-  printf("EXPECTED: Bed VS Bedroom, all letters:\n%d\n", strncmp(s1, s2, 7));
-  printf("ACTUAL RESULT:\n %d\n\n", ft_strncmp(s1, s2, 7));
-  printf("TEST 3:\n");
-  printf("EXPECTED: Bed VS Door: \n %d\n", strncmp(s1, s3, 10));
-  printf("ACTUAL RESULT: \n %d\n\n", ft_strncmp(s1, s3, 10));
-  printf("TEST 4:\n");
-  printf("EXPECTED: Door VS Bed: \n %d\n", strncmp(s3, s1, 10));
-  printf("ACTUAL RESULT: \n %d\n\n", ft_strncmp(s3, s1, 10));
-  printf("TEST 5:\n");
-  printf("EXPECTED: "" VS Incomprehensibilities: \n %d\n", strncmp(s4, s5, 10));
-  printf("ACTUAL RESULT: \n %d\n\n", ft_strncmp(s4, s5, 10));
+	i = 0;
+	while (i < n && s1[i] && s2[i])
+	{
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	if (i < n && (s1[i] || s2[i]))
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	return (0);
 }
-*/

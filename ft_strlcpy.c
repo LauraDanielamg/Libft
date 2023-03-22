@@ -10,37 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int	ft_strlen(const char *str)
-{
-	int		len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
+size_t	ft_strlen(const char *str);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t srclen;
+	size_t	i;
+	size_t	srclen;
 
 	i = 0;
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
-		return(srclen);
-	while(src[i]  && i < dstsize - 1)
+		return (srclen);
+	while (src[i] && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return(srclen);
+	return (srclen);
 }
-
 /*int main()
 {
 	char src[] = "12345";
