@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -21,9 +20,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((unsigned char *)s);
 		s++;
 	}
-	return (NULL);	
+	return (NULL);
 }
-
 /*int main()
 {
 	char *s = "Hola";
