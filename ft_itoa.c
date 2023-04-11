@@ -12,29 +12,53 @@
 
 #include "libft.h"
 
+static size_t	num_len(int n)
+{
+	size_t	len;
+
+	len = 0;
+	while (n)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
+}
+
+static void	fill_str(char *str, size_t len, int n, int sign)
+{
+	size_t	i;
+
+	i = len;
+	str[i] = '\0';
+	while (i > 0)
+	{
+		i--;
+		str[i] = (n % 10) * sign + '0';
+		n /= 10;
+	}
+	if (sign == -1)
+		str[0] = '-';
+	else
+		str[0] = n + '0';
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
 	size_t	len;
 	int		sign;
 
-	sign = (n < 0) ? -1 : 1;
-	len = (n < 0) ? 2 : 1;
-	while (n / 10)
-	{
-		len++;
-		n /= 10;
-	}
+	if (n < 0)
+		sign = -1;
+	else
+		sign = 1;
+	len = num_len(n) + (sign == -1);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
-	while (len--)
-	{
-		str[len] = (n % 10) * sign + '0';
-		n /= 10;
-	}
 	if (sign == -1)
-		str[0] = '-';
+		n = -n;
+	fill_str(str, len, n, sign);
 	return (str);
 }

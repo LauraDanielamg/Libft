@@ -9,6 +9,12 @@
 /*   Updated: 2023/03/16 17:18:16 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief find lenght of a string
+ * 
+ * @param str string to check
+ * @return size_t i, number of characters that precede the end of str 
+ */
 
 #include "libft.h"
 

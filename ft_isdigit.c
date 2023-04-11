@@ -9,6 +9,12 @@
 /*   Updated: 2023/01/11 12:44:49 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Checks if an integer is a number/digit in the ascii table.
+ * 
+ * @param n integer to check.
+ * @return 1 if True, 0 if False.
+ */
 
 int	ft_isdigit(int n)
 {

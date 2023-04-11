@@ -9,6 +9,12 @@
 /*   Updated: 2023/02/07 10:32:26 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Sets a block of memory with and specific value
+ * 
+ * @param b block of memory, c value to fill, len leght of block.
+ * @return
+ */
 
 #include "libft.h"
 
