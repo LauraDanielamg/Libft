@@ -9,10 +9,18 @@
 /*   Updated: 2023/02/03 19:42:30 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Copies a string into a fixed-size buffer,
+ * ensuring the buffer is not overrun.
+ * 
+ * @param dest A pointer to the destination buffer.
+ * @param src A pointer to the source string.
+ * @param dstsize The size of the destination buffer
+ * 
+ * @return The lenght of the source string
+ */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

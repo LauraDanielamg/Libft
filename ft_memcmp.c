@@ -9,6 +9,16 @@
 /*   Updated: 2023/02/07 16:49:51 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Compares two blocks of memory for equality.
+ * 
+ * @param s1 Pointer to the first block of memory to compare.
+ * @param s2 Pointer to the second block of memory to compare.
+ * @param n Number of bytes to compare.
+ * 
+ * @return an integer indicanting the difference between the first non-matching
+ * bytes of the memory blocks or 0 if the memory blocks are equal.
+ */
 
 #include "libft.h"
 

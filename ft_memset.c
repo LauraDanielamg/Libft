@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 /**
- * @brief Sets a block of memory with and specific value
+ * @brief Sets a block of memory with an specific value
  * 
- * @param b block of memory, c value to fill, len leght of block.
- * @return
+ * @param b block of memory.
+ * @param c value to fill. 
+ * @param len leght of block.
  */
 
 #include "libft.h"

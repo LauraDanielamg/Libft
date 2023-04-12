@@ -9,6 +9,16 @@
 /*   Updated: 2023/02/07 13:01:33 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Copies a block of memory from a source address to a destination adress
+ * but handling the overlapping memory sections correctly
+ * 
+ * @param dest A pointer to the destination block of memory.
+ * @param src A pointer to the source block of memory.
+ * @param len The number of bytes to copy
+ * 
+ * @return A pointer to the destination block of memory.
+ */
 
 #include "libft.h"
 

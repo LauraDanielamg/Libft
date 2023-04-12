@@ -9,6 +9,16 @@
 /*   Updated: 2023/03/10 23:38:34 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Allocates a block of memory for an array of elements and initializes
+ * all bytes in the block to zero.
+ * 
+ * @param nmemb Number of elements to allocate memory for.
+ * @param size Size in bytes of each elements
+ * 
+ * @return If the allocation is successfull, a pointer to the first byte of the 
+ * allocated block of memory. Otherwise, will return NULL.
+ */
 
 #include "libft.h"
 

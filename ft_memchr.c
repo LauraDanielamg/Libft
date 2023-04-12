@@ -9,6 +9,17 @@
 /*   Updated: 2023/02/07 16:36:43 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Searches for the first ocurrence of a specified character in a block
+ * of memory
+ * 
+ * @param s Pointer to the block of memory to search
+ * @param c Character to search for
+ * @param n Number of bytes to search
+ * 
+ * @return A pointer to the first ocurrence of the character; otherwise will
+ * return NULL
+ */
 
 #include "libft.h"
 

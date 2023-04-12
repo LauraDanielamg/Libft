@@ -9,6 +9,16 @@
 /*   Updated: 2023/01/18 10:46:15 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Compares two strings up to a specified number of characters.
+ * 
+ * @param s1 A pointer to the first string to be compared.
+ * @param s2 A pointer to the second string to be compared.
+ * @param n the maximun number of characters to compare.
+ * 
+ * @return An integer value indicanting the relationship between the strings.
+ * 
+ */
 
 #include "libft.h"
 

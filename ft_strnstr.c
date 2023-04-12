@@ -9,6 +9,18 @@
 /*   Updated: 2023/03/07 09:32:21 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Locates the first ocurrence of a specified substring in a given string
+ * within a specified maximun lenght.
+ * 
+ * @param haystack Pointher to the string to search in.
+ * @param needle Pointer to the substring to search for.
+ * @param len Maximum number of characters to search in the haystack string.
+ * 
+ * @return If the substring is found, returns a pointer to the first ocurrence of
+ * the substring. Otherwise, returns NULL. Also returns NULL if the specified 
+ * lenght is less than the length of the substring.
+ */
 
 #include "libft.h"
 

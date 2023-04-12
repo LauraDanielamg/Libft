@@ -9,6 +9,14 @@
 /*   Updated: 2023/01/17 12:18:27 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Converts a lowercase letter to its corresponding uppercase letter
+ * 
+ * @param c the character to be converted
+ * 
+ * @return The corresponding uppercase letter if c is a lowercase letter;
+ * otherwise, the original character.
+ */
 
 int	ft_toupper(int c)
 {

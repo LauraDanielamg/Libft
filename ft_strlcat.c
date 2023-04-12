@@ -9,6 +9,16 @@
 /*   Updated: 2023/02/03 18:56:01 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Concatenates two strings into a fixed-size buffer,
+ * ensuring the buffer is not overrun.
+ * 
+ * @param dest A pointer to the destination buffer.
+ * @param src A pointer to the source string.
+ * @param dstsize The number of the destination buffer.
+ * 
+ * @return The total length of the concatenated string.
+ */
 
 #include "libft.h"
 

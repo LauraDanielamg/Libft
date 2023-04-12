@@ -9,6 +9,15 @@
 /*   Updated: 2023/03/07 10:53:47 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Converts a string of charactes representing an integer into an actual
+ * integer value.
+ * 
+ * @param str Pointer to the string of characters to be converted.
+ * 
+ * @return If the string is a valid representation of an integer, returns the
+ * integer value of the string. Otherwise returns 0.
+ */
 
 #include "libft.h"
 
