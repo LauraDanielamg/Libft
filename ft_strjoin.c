@@ -9,6 +9,16 @@
 /*   Updated: 2023/03/11 09:16:25 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Allocates memory for and returns a new string that is the result of
+ * concatenating two given strings.
+ * 
+ * @param s1 Pointer to the first string
+ * @param s2 Pointer to the second string
+ * 
+ * @return If the memory allocation is successful and the new string is created, 
+ * returns a pointer to the new string. Otherwise, returns a NULL pointer
+ */
 
 #include "libft.h"
 
