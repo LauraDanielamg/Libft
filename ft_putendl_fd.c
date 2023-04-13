@@ -9,6 +9,15 @@
 /*   Updated: 2023/03/11 09:41:52 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Writes the string s to the specified file descriptor, followed by 
+ * a newline character
+ * 
+ * @param s The string to output.
+ * @param fd The file descriptor to write to.
+ * 
+ * @return None
+ */
 
 #include "libft.h"
 

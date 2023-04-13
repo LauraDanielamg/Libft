@@ -9,6 +9,14 @@
 /*   Updated: 2023/03/11 09:36:21 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Outputs a character to the specified file descriptor.
+ * 
+ * @param c The character to output.
+ * @param fd The file descriptor to write to.
+ * 
+ * @return None
+ */
 
 #include "libft.h"
 

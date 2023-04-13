@@ -9,6 +9,16 @@
 /*   Updated: 2023/03/11 09:30:24 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Applies a function to each character of a string and creates a new
+ * string with the results.
+ * 
+ * @param s The string to iterate over.
+ * @param f The function to apply to each character.
+ * 
+ * @return A new string created after applying the function f to each character 
+ * of the original string. Returns NULL if the memory allocation fails.
+ */
 
 #include "libft.h"
 

@@ -9,6 +9,14 @@
 /*   Updated: 2023/03/11 09:45:02 by laumoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+ * @brief Writes an integer to a file descriptor
+ * 
+ * @param n The integer to be written.
+ * @param fd The file descriptor to write to.
+ * 
+ * @return None
+ */
 
 #include "libft.h"
 
