@@ -24,3 +24,24 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+/*#include <fcntl.h>
+#include <unistd.h>
+
+int	main(void)
+{
+	int	fd;
+	char	c;
+
+	// Open file for writing
+	fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
+	// Write character to file using ft_putchar_fd
+	c = 'a';
+	ft_putchar_fd(c, fd);
+
+	// Close file
+	close(fd);
+
+	return (0);
+}*/
