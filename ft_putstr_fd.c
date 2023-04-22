@@ -29,3 +29,22 @@ void	ft_putstr_fd(char *s, int fd)
 		len++;
 	write(fd, s, len);
 }
+/*
+#include <fcntl.h>
+
+int main(void)
+{
+    int fd;
+    char *str = "Hello, World!";
+
+    // Open a file for writing
+    fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+
+    // Write the string to the file using ft_putstr_fd
+    ft_putstr_fd(str, fd);
+
+    // Close the file descriptor
+    close(fd);
+
+    return 0;
+}*/
