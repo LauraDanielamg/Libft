@@ -30,7 +30,10 @@ void	ft_bzero(void *b, size_t len)
 		p++;
 	}
 }
-/*int main()
+/*
+#include <string.h>
+#include <stdio.h>
+int main()
 {
 	char s[10];
 	char t[10];
@@ -38,7 +41,8 @@ void	ft_bzero(void *b, size_t len)
 
 	bzero(s, len);
 	ft_bzero(t, len);
-	printf("%s", t);
+	printf("Expected: %s\n", s);
+	printf("Actuall: %s\n", t);
 
 	return (0);
 }*/
