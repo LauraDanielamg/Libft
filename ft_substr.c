@@ -25,22 +25,25 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	str_len;
-	char	*substr;
+	char	*str;
+	size_t	strlen;
 
-	str_len = ft_strlen(s);
-	if (start >= str_len)
-	{
-		substr = malloc(1);
-		*substr = '\0';
-		return (substr);
-	}
-	if (len > (str_len - start))
-		len = str_len - start;
-	len++;
-	substr = malloc((len) * sizeof(char));
-	if (!substr)
+	if (s == NULL)
 		return (NULL);
-	ft_strlcpy(substr, s + start, len);
-	return (substr);
+	strlen = ft_strlen(s);
+	if (start > strlen)
+	{
+		str = malloc(sizeof(char));
+		if (str != NULL)
+			str[0] = '\0';
+		return (str);
+	}
+	if (len > strlen - start)
+		len = strlen - start;
+	len++;
+	str = malloc(sizeof(char) * len);
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, s + start, len);
+	return (str);
 }
