@@ -48,16 +48,30 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*int main()
+
+#include <string.h>
+#include <stdio.h>
+
+/*int main(void)
 {
-	char dest[5];
-	char source[5] = "Hola";
-	size_t len = 4;
-	char dest1[5];
-	char source1[5] = "Hola";
+    char str1[] = "Hello, World!";
+    char str2[] = "Hello, World!";
+    char *result1;
+    char *result2;
 
-	printf("%s\n", ((char *)memmove(dest, source, len)));
-	printf("%s", ((char *)ft_memmove(dest1, source1, len)));
+    printf("Before ft_memmove: %s\n", str1);
+    printf("Before memmove: %s\n", str2);
 
-	return (0);
+    result1 = ft_memmove(str1 + 3, str1, strlen(str1) - 2);
+    result2 = memmove(str2 + 3, str2, strlen(str2) - 2);
+
+    printf("After ft_memmove: %s\n", result1);
+    printf("After memmove: %s\n", result2);
+
+    if (strcmp(result1, result2) == 0)
+        printf("The results are the same.\n");
+    else
+        printf("The results are different.\n");
+
+    return 0;
 }*/
