@@ -36,3 +36,37 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(ptr, 0, total_size);
 	return (ptr);
 }
+
+/*
+#include <stdio.h>
+int main()
+{   
+	int* array1 = (int*)ft_calloc(5, sizeof(int));
+    int* array2 = (int*)calloc(5, sizeof(int));
+
+    for (int i = 0; i < 5; i++)
+    {
+        array1[i] = 0;
+        array2[i] = 0;
+    }
+
+    printf("Array 1: ");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", array1[i]);
+    }
+    printf("\n");
+
+    printf("Array 2: ");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", array2[i]);
+    }
+    printf("\n");
+
+    free(array2);
+    free(array1);
+
+    return (0);
+}
+*/
