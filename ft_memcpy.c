@@ -36,12 +36,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 
 #define BUF_SIZE 256
 
-/*int main()
+int main()
 {
     
     char src[BUF_SIZE] = "This is a test string";

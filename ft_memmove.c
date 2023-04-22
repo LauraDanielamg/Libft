@@ -48,11 +48,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 
-/*int main(void)
+int main(void)
 {
     char str1[] = "Hello, World!";
     char str2[] = "Hello, World!";
