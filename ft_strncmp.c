@@ -37,3 +37,25 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	return (0);
 }
+
+#include <stdio.h>
+
+int main()
+{
+    const char *test_strings[][2] = {
+        {"Hello, World!", "Hello, World!"},
+        {"Hello, World!", "Hello, world!"},
+        {"Hello, World!", "Hello, Worl"},
+        {"abc", "abcde"},
+        {"", ""}
+    };
+    size_t test_cases = sizeof(test_strings) / sizeof(test_strings[0]);
+
+    for (size_t i = 0; i < test_cases; i++)
+    {
+        int result = ft_strncmp(test_strings[i][0], test_strings[i][1], 20);
+        printf("Comparing \"%s\" and \"%s\": %d\n", test_strings[i][0], test_strings[i][1], result);
+    }
+
+    return 0;
+}

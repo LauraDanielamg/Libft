@@ -29,10 +29,10 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)s);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
-int main()
+/*int main()
 {
     const char *test_string = "Hello, world!";
     int test_char = 'o';
@@ -42,7 +42,8 @@ int main()
     result_ft = ft_strchr(test_string, test_char);
     result_orig = strchr(test_string, test_char);
     if (result_ft == result_orig)
-        printf("Test 1: Both functions found '%c' at position %ld\n", test_char, result_ft - test_string);
+        printf("Test 1: Both functions found '%c' at position %ld\n",
+         test_char, result_ft - test_string);
     else
         printf("Test 1: Mismatch between ft_strchr and strchr results\n");
 
@@ -60,7 +61,8 @@ int main()
     result_ft = ft_strchr(test_string, test_char);
     result_orig = strchr(test_string, test_char);
     if (result_ft == result_orig)
-        printf("Test 3: Both functions found '%c' at position %ld\n", test_char, result_ft - test_string);
+        printf("Test 3: Both functions found '%c' at position %ld\n", 
+        test_char, result_ft - test_string);
     else
         printf("Test 3: Mismatch between ft_strchr and strchr results\n");
 
@@ -69,10 +71,10 @@ int main()
     result_ft = ft_strchr(test_string, test_char);
     result_orig = strchr(test_string, test_char);
     if (result_ft == result_orig)
-        printf("Test 4: Both functions found '%c' at position %ld\n", test_char, result_ft - test_string);
+        printf("Test 4: Both functions found '%c' at position %ld\n", 
+        test_char, result_ft - test_string);
     else
         printf("Test 4: Mismatch between ft_strchr and strchr results\n");
 
     return 0;
-}
-*/
+}*/
