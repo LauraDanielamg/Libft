@@ -39,17 +39,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (srclen);
 }
-/*int main()
-{
-	char src[] = "12345";
-	char dst[] = "Hello";
-	char src1[] = "12345";
-    char dst1[] = "Hello";
-
-	printf("Expected: \n");
-	printf("%zu | %s\n", strlcpy(dst, src, 6), dst);
-	printf("Actual Result: \n");
-    printf("%zu | %s\n", ft_strlcpy(dst1, src1, 6), dst1);
-	return (0);
-
-}*/

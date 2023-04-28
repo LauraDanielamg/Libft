@@ -36,25 +36,3 @@ void	ft_putnbr_fd(int n, int fd)
 	digit = nn % 10 + '0';
 	ft_putchar_fd(digit, fd);
 }
-
-/*#include <fcntl.h>
-#include <unistd.h>
-
-int main(void)
-{
-    int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-
-    ft_putnbr_fd(42, fd);
-    ft_putchar_fd('\n', fd);
-    ft_putnbr_fd(-42, fd);
-    ft_putchar_fd('\n', fd);
-    ft_putnbr_fd(0, fd);
-    ft_putchar_fd('\n', fd);
-    ft_putnbr_fd(2147483647, fd);
-    ft_putchar_fd('\n', fd);
-    ft_putnbr_fd(-2147483648, fd);
-    ft_putchar_fd('\n', fd);
-
-
-    return 0;
-}*/

@@ -25,14 +25,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-    int c = 102;
-    int result = ft_isalnum(c);
-    if (result == 0)
-        write(1,"FALSE", 5);
-    else if (result == 1)
-        write(1, "TRUE", 4);
-    return (0);
-}*/

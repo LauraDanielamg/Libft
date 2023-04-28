@@ -30,22 +30,3 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
-
-/*#include <fcntl.h>
-#include <unistd.h>
-
-int main()
-{
-    // Test with stdout (file descriptor 1)
-    ft_putendl_fd("Check the output.txt file created", 1);
-
-    // Test with a file
-    int fd = open("output.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
-
-    ft_putendl_fd("This is a test.", fd);
-    ft_putendl_fd("Another line in the file.", fd);
-
-    close(fd);
-
-    return 0;
-}*/

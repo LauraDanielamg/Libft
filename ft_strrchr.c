@@ -36,13 +36,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (ss);
 }
-/*int main()
-{
-	char *s = "Hola";
-	int c = 'a';
-
-	printf("%s\n", strrchr(s, c));
-	printf("%s", ft_strrchr(s,c));
-
-return (0);
-}*/

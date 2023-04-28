@@ -24,12 +24,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-/*int main()
-{
-	int a = 'B';
-	
-	int A = tolower(a);
-
-	write(1, &A, 1);
-	return (0);
-}*/

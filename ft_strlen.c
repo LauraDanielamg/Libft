@@ -27,12 +27,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*#include <stdio.h>
-int main(void)
-{
-   const char *str = "Hola";
-   size_t result;
-   result = ft_strlen(str);
-   printf("El valor es %zu.\n", result);
-   return (0);
-}*/

@@ -23,13 +23,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-/*int main(void)
-{
-    int c = 134121;
-    int result = ft_isprint(c);
-    if (result == 0)
-        write(1,"FALSE", 5);
-    else if (result == 1)
-        write(1, "TRUE", 4);
-    return (0);
-}*/

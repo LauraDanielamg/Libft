@@ -42,23 +42,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	else
 		return (*p1 - *p2);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    char s1[] = "hello";
-    char s2[] = "world";
-    size_t n = strlen(s1);
-
-    // Test ft_memcmp
-    int result1 = ft_memcmp(s1, s2, n);
-    printf("Result of ft_memcmp: %d\n", result1);
-
-    // Test memcmp
-    int result2 = memcmp(s1, s2, n);
-    printf("Result of memcmp: %d\n", result2);
-
-    return 0;
-}*/
