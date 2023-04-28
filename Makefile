@@ -1,7 +1,7 @@
 # -------- Definition of variables --------
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
-COMPILE = @$(CC) $(FLAGS)
+COMPILE = @$(CC) $(FLAGS) -I.
 NAME = libft.a
 HEADER = libft.h
 
@@ -32,6 +32,43 @@ BONUS_SRC =	ft_lstadd_back_bonus.c	ft_lstadd_front_bonus.c \
 		ft_lstmap_bonus.c	ft_lstnew_bonus.c \
 		ft_lstsize_bonus.c
 
+TEST_SRCS = test_libft.c \
+            test/test_ft_isalnum.c \
+            test/test_ft_isprint.c \
+            test/test_ft_memcpy.c \
+            test/test_ft_putendl_fd.c \
+            test/test_ft_strchr.c \
+            test/test_ft_strlcat.c \
+            test/test_ft_strncmp.c \
+            test/test_ft_substr.c \
+            test/test_ft_atoi.c \
+            test/test_ft_isalpha.c \
+            test/test_ft_itoa.c \
+            test/test_ft_memmove.c \
+            test/test_ft_putnbr_fd.c \
+            test/test_ft_strdup.c \
+            test/test_ft_strlcpy.c \
+            test/test_ft_strnstr.c \
+            test/test_ft_tolower.c \
+            test/test_ft_bzero.c \
+            test/test_ft_isascii.c \
+            test/test_ft_memchr.c \
+            test/test_ft_memset.c \
+            test/test_ft_putstr_fd.c \
+            test/test_ft_striteri.c \
+            test/test_ft_strlen.c \
+            test/test_ft_strrchr.c \
+            test/test_ft_toupper.c \
+            test/test_ft_calloc.c \
+            test/test_ft_isdigit.c \
+            test/test_ft_memcmp.c \
+            test/test_ft_putchar_fd.c \
+            test/test_ft_split.c \
+            test/test_ft_strjoin.c \
+            test/test_ft_strmapi.c \
+            test/test_ft_strtrim.c
+
+
 all: $(NAME)
 
 COMPLETE_SRC	=	$(PART_1_SRC) $(PART_2_SRC)
@@ -40,21 +77,31 @@ COMPLETE_OBJ	=	$(COMPLETE_SRC:%.c=%.o)
 
 BONUS_OBJ	=	$(BONUS_SRC:%.c=%.o)
 
+TEST_OBJS = $(TEST_SRCS:.c=.o)
+
 $(NAME): $(COMPLETE_OBJ)
-	@echo "Compiling complete library into ${NAME}"
+	@echo "Compiling complete library into $(NAME)"
 	@ar -rcs $(NAME) $(COMPLETE_OBJ)
-	ranlib ${NAME}
+	ranlib $(NAME)
 	@echo "OK"
 
+# -------- Pattern rule for object files --------
+%.o: %.c $(HEADER)
+	$(COMPILE) -c $< -o $@
+
+# -------- Test target --------
+test: $(COMPLETE_OBJ) $(TEST_OBJS)
+	$(CC) -o test_libft $(COMPLETE_OBJ) $(TEST_OBJS)
+	./test_libft
 
 # -------- CLEAN --------
-.PHONY: re fclean
+.PHONY: re fclean clean
 
 re: fclean all
 
 clean:
-	@echo "--Removing binary objects in ${NAME}"
-	@rm -f $(COMPLETE_OBJ) $(BONUS_OBJ)
+	@echo "--Removing binary objects in \\${NAME}"
+	@rm -f $(COMPLETE_OBJ) $(BONUS_OBJ) $(TEST_OBJS)
 	@echo "OK"
 
 fclean: clean

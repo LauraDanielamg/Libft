@@ -20,7 +20,7 @@ void test_strdup(const char *s)
     free(ft_result);
 }
 
-void test_ft_itoa(void)
+void test_ft_strdup(void)
 {
     test_strdup("Hello, world!");
     test_strdup("This is a test.");

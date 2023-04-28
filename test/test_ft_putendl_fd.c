@@ -2,7 +2,7 @@
 #include <fcntl.h>
 #include "libft.h"
 
-void test_ft_putenl_fd(void)
+void test_ft_putendl_fd(void)
 {
     // Test with stdout (file descriptor 1)
     ft_putendl_fd("Check the output.txt file created", 1);

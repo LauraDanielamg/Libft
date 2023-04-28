@@ -4,6 +4,7 @@
 
 void custom_function(unsigned int i, char *c)
 {
+    (void)i;
     // Modify the character, for example, by increasing its ASCII value by 1
     *c = *c + 1;
 }

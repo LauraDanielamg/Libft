@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "libft.h"
+#include <libft.h>
+
+int	ft_atoi(const char *str);
 
 void test_ft_atoi(void)
 {

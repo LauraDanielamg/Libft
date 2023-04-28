@@ -4,7 +4,7 @@
 
 char ft_custom_function(unsigned int i, char c)
 {
-    // Modify the character, for example, by increasing its ASCII value by 1
+    (void)i;// Modify the character, for example, by increasing its ASCII value by 1
     return c + 1;
 }
 void test_ft_strmapi(void)

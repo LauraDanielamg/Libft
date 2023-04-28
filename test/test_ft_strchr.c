@@ -2,7 +2,7 @@
 #include <string.h>
 #include "libft.h"
 
-void test_ft_strch(void)
+void test_ft_strchr(void)
 {
     const char *test_string = "Hello, world!";
     int test_char = 'o';
